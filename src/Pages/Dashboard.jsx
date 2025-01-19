@@ -102,8 +102,8 @@ function Dashboard({ session, onSignOut }) {
         }
       );
       const data = await response.json();
-      if (data) {
-        fetchEventsBetweenDates(fromDate, toDate);
+      if (data) { 
+        await fetchEventsBetweenDates(fromDate, toDate);
       }
       alert("Event created, check your Google Calendar!");
     } catch (error) {
